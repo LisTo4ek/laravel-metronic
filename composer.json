@@ -1,0 +1,15 @@
+{
+    "name": "listo4ek/laravel-metronic",
+    "description": "Metronic template package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "listo4ek",
+            "email": "list.codemg@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    }
+}
