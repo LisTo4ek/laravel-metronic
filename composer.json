@@ -11,6 +11,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Listo4ek\\Metronic\\": "src/"
+        }
     }
 }
 
