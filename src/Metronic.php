@@ -1,4 +1,7 @@
-<?php namespace Listo4ek\Metronic;
+<?php
+// v0.5
+
+namespace Listo4ek\Metronic;
 
 //use Collective\Html\FormBuilder;
 use Collective\Html\HtmlBuilder;
