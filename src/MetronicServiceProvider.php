@@ -1,6 +1,7 @@
 <?php namespace Listo4ek\Metronic;
 
 use Illuminate\Support\ServiceProvider;
+use View;
 
 class MetronicServiceProvider extends ServiceProvider
 {
@@ -9,7 +10,7 @@ class MetronicServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    protected $defer = true;
+    protected $defer = false;
 
     /**
      * Register the service provider.
@@ -21,7 +22,7 @@ class MetronicServiceProvider extends ServiceProvider
 //        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'bootstrap_form');
 
         $this->app->bindShared('metronic', function($app) {
-            return new Metronic($app['html'], $app['form'], $app['config']);
+            return new Metronic();
         });
     }
 
@@ -32,9 +33,16 @@ class MetronicServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $this->publishes([
-//            __DIR__.'/config/config.php' => config_path('metronic.php')
-//        ], 'config');
+	    $this->loadViewsFrom(__DIR__.'/views', 'metronic');
+
+//	    View::composer('metronic::layouts.layout4.sidebar', function($view) {
+//		    $view->with('items', $items);
+//	    });
+//
+//	    View::composer('metronic::layouts.layout4.sidebar', function($view) {
+//		    $view->with('items', $items);
+//	    });
+
     }
 
     /**

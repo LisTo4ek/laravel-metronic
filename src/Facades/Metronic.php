@@ -2,8 +2,24 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class BootstrapForm extends Facade
+class Metronic extends Facade
 {
+
+
+	/**
+	 *
+	 *
+	 * @var string
+	 */
+	const BTN_TYPE_SUBMIT = 'submit';
+
+	/**
+	 *
+	 *
+	 * @var string
+	 */
+	const BTN_TYPE_BUTTON = 'button';
+
     /**
      * Get the registered name of the component.
      *
